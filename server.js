@@ -57,6 +57,10 @@ app.get('/api/index', (req, res) => {
   res.send('Welcome to the FindaDoctor API');
 });
 
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'Welcome to FindaDoctor API' });
+});
+
 // Error handling middleware
 app.use(errorHandler);
 

@@ -1,3 +1,4 @@
+import e from 'express';
 import mongoose from 'mongoose';
 
 const connectDB = async () => {
@@ -6,7 +7,7 @@ const connectDB = async () => {
         console.log(`MongoDB Connected: ${conn.connection.host}`);
     } catch (error) {
         console.error(`Error: ${error.message}`);
-        process.exit(1);
+        throw error;
     }
 };
 
