@@ -1,4 +1,4 @@
-import Staff from "../models/staff.js";
+import Staff from "../models/Staff.js";
 import Prescription from "../models/Prescription.js";
 import Appointment from "../models/Appointment.js";
 import Patient from "../models/Patient.js";
