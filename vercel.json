@@ -1,10 +1,17 @@
 {
-  "rewrites": [
-    { "source": "/api/auth/(.*)", "destination": "/api/auth/$1" },
-    { "source": "/api/super-admin/(.*)", "destination": "/api/super-admin/$1" },
-    { "source": "/api/admin/(.*)", "destination": "/api/admin/$1" },
-    { "source": "/api/doctor/(.*)", "destination": "/api/doctor/$1" },
-    { "source": "/api/patient/(.*)", "destination": "/api/patient/$1" },
-    { "source": "/api/staff/(.*)", "destination": "/api/staff/$1" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/api/auth/(.*)", "dest": "/api/auth/$1" },
+    { "src": "/api/super-admin/(.*)", "dest": "/api/super-admin/$1" },
+    { "src": "/api/admin/(.*)", "dest": "/api/admin/$1" },
+    { "src": "/api/doctor/(.*)", "dest": "/api/doctor/$1" },
+    { "src": "/api/patient/(.*)", "dest": "/api/patient/$1" },
+    { "src": "/api/staff/(.*)", "dest": "/api/staff/$1" }
   ]
 }
