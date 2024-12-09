@@ -7,12 +7,6 @@
     }
   ],
   "routes": [
-    { "src": "/", "dest": "/api/index" },
-    { "src": "/api/auth/(.*)", "dest": "/api/auth/$1" },
-    { "src": "/api/super-admin/(.*)", "dest": "/api/super-admin/$1" },
-    { "src": "/api/admin/(.*)", "dest": "/api/admin/$1" },
-    { "src": "/api/doctor/(.*)", "dest": "/api/doctor/$1" },
-    { "src": "/api/patient/(.*)", "dest": "/api/patient/$1" },
-    { "src": "/api/staff/(.*)", "dest": "/api/staff/$1" }
+    { "src": "/(.*)", "dest": "/server.js" }
   ]
 }
