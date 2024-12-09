@@ -53,6 +53,10 @@ app.use('/api/doctor', doctorRoutes);
 app.use('/api/patient', patientRoutes);
 app.use('/api/staff', staffRoutes);
 
+app.get('/api/index', (req, res) => {
+  res.send('Welcome to the FindaDoctor API');
+});
+
 // Error handling middleware
 app.use(errorHandler);
 
