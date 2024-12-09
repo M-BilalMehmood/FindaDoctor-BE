@@ -1,5 +1,10 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/api/auth/(.*)", "destination": "/api/auth/$1" },
+    { "source": "/api/super-admin/(.*)", "destination": "/api/super-admin/$1" },
+    { "source": "/api/admin/(.*)", "destination": "/api/admin/$1" },
+    { "source": "/api/doctor/(.*)", "destination": "/api/doctor/$1" },
+    { "source": "/api/patient/(.*)", "destination": "/api/patient/$1" },
+    { "source": "/api/staff/(.*)", "destination": "/api/staff/$1" }
   ]
 }
