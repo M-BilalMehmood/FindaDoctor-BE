@@ -213,7 +213,7 @@ class AuthController {
         expiresIn: "1d",
       });
 
-      res.cookie("token", token, {
+      res.cookie("token", jwtToken, {
         httpOnly: true,
         secure: true, // Enable for HTTPS
         sameSite: "none", // Required for cross-origin cookies
@@ -292,8 +292,8 @@ class AuthController {
       // Set the cookie properly
       res.cookie("token", jwtToken, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
-        sameSite: "lax",
+        secure: true,
+        sameSite: "none",
         maxAge: 24 * 60 * 60 * 1000, // 1 day
       });
 
