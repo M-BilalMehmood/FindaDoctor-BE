@@ -240,8 +240,8 @@ class AuthController {
             // Set the token as an HTTP-only cookie
             res.cookie('token', token, {
                 httpOnly: true,
-                secure: false, // Set to true in production
-                sameSite: 'lax', // Adjust based on your needs
+                secure: true, // Enable for HTTPS
+                sameSite: 'none', // Required for cross-origin cookies
                 maxAge: 24 * 60 * 60 * 1000 // 1 day
             });
             res.status(200).json({
